@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEROLA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/"><img src="/verola.png" width="150"></a></div>
+        <nav class="nav-menu">
+            <a class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                </svg>
+                <span>მთავარი</span>
+            </a>
+            <a class="nav-item" id="collectionBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/>
+                </svg>
+                <span>კოლექცია</span>
+            </a>
+
+                        <a class="nav-item" style="margin-top:15px">
+<svg
+  width="20"
+  height="20"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+
+  <!-- T-shirt body -->
+  <path
+    d="M4 5L8 3H16L20 5V9L18 8V21H6V8L4 9V5Z"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+    stroke-linecap="round"/>
+
+  <!-- Collar -->
+  <path
+    d="M9 3.2C9.8 5 10.8 6 12 6C13.2 6 14.2 5 15 3.2"
+    stroke="currentColor"
+    stroke-width="1.4"
+    stroke-linecap="round"/>
+
+  <!-- Sleeves -->
+  <path
+    d="M4 8C5.5 7.5 7 7 8 6.5M20 8C18.5 7.5 17 7 16 6.5"
+    stroke="currentColor"
+    stroke-width="1.4"
+    stroke-linecap="round"/>
+
+</svg>
+
+                <span>სამოსის მორგება
+                                       <p style="text-align: center;"> BODY LUXS AI</p>
+
+                </span>
+            </a>
+        </nav>
+        <a class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <span>კალათა</span>
+            </a>
+        <div class="search-container">
+            <form class="search-form" onsubmit="return false">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="ძიება...">
+            </form>
+        </div>
+        <div class="buttons">
+            <button>შესვლა</button>
+            <button>რეგისტრაცია</button>
+        </div>
+    </header>
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">კოლექცია</h1>
+                <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+
+            <div class="filter-section">
+                <div class="view-controls">
+                    <button class="view-btn active" id="gridViewBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        Grid
+                    </button>
+                    <button class="view-btn" id="listViewBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                        </svg>
+                        List
+                    </button>
+                </div>
+
+                <div class="filter-group" style="margin-bottom: 20px;">
+                    <label class="filter-label">ძიება</label>
+                    <input type="text" class="filter-input" id="filterSearch" placeholder="მოძებნე პროდუქტი...">
+                </div>
+
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">კატეგორია</label>
+                        <select class="filter-select" id="filterCategory">
+                            <option value="ყველა">ყველა</option>
+                            <option value="პერანგები">პერანგები</option>
+                            <option value="პიჯაკები">პიჯაკები</option>
+                            <option value="კაბები">კაბები</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">ზომა</label>
+                        <select class="filter-select" id="filterSize">
+                            <option value="ყველა">ყველა</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                            <option value="BODY LUXS AI">BODY LUXS AI</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">ფერი</label>
+                        <select class="filter-select" id="filterColor">
+                            <option value="ყველა">ყველა</option>
+                            <option value="შავი">შავი</option>
+                            <option value="თეთრი">თეთრი</option>
+                            <option value="ლურჯი">ლურჯი</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">დალაგება</label>
+                        <select class="filter-select" id="filterSort">
+                            <option value="უახლესი">უახლესი</option>
+                            <option value="ფასი ↓">ფასი ↓</option>
+                            <option value="ფასი ↑">ფასი ↑</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="apply-btn" id="applyFilterBtn">გამოყენება</button>
+                    <button class="reset-btn" id="resetFilterBtn">გასუფთავება</button>
+                </div>
+            </div>
+
+            <!-- მხოლოდ დამატება: Modal-ში Card-ების ადგილი -->
+            <div class="modal-results" id="modalResults"></div>
+
+        </div>
+    </div>
+    <!-- CAROUSEL -->
+    <div class="card-container">
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel">
+                <div class="card" data-category="პერანგები" data-size="M" data-color="თეთრი">
+                    <div class="card-image"><img src="/klasikuri perangi.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">კლასიკური პერანგი</h2>
+                        <div class="card-price">60 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                <div class="card" data-category="პიჯაკები" data-size="L" data-color="შავი">
+                    <div class="card-image"><img src="/mariamiverola.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">პიჯაკი და ქვედაბოლო</h2>
+                        <div class="card-price">120 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                <div class="card" data-category="პერანგები" data-size="M" data-color="ლურჯი">
+                    <div class="card-image"><img src="/klasikuri sharvali.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">კლასიკური შარვალი</h2>
+                        <div class="card-price">90 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                <div class="card" data-category="პიჯაკები" data-size="XL" data-color="შავი">
+                    <div class="card-image"><img src="/clasikuri oreuli.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">კლასიკური ორეული</h2>
+                        <div class="card-price">240 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                <div class="card" data-category="კაბები" data-size="S" data-color="თეთრი">
+                    <div class="card-image"><img src="/clacikuri sameuli.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">ლასიკური სამეული</h2>
+                        <div class="card-price">260 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                <div class="card" data-category="პერანგები" data-size="M" data-color="ლურჯი">
+                    <div class="card-image"><img src="/ჯე.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">კაჟუალური ჯემპერი</h2>
+                        <div class="card-price">80 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                                <div class="card" data-category="პერანგები" data-size="M" data-color="ლურჯი">
+                    <div class="card-image"><img src="/90s style.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">90-იანი წლების ჩაცმულობა</h2>
+                        <div class="card-price">100 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                                <div class="card" data-category="პერანგები" data-size="M" data-color="ლურჯი">
+                    <div class="card-image"><img src="/00fedb8c-60d1-465e-b64c-7589a3454807.jpg"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">Y2K ორეული</h2>
+                        <div class="card-price">40 ₾</div>
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+                </div>
+                              
+
+            </div>
+        </div>
+        <button class="nav-button nav-prev" id="prev">‹</button>
+        <button class="nav-button nav-next" id="next">›</button>
+    </div>
+<script src="libs.js"></script>
+</body>
+</html>
